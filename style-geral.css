@@ -1,0 +1,67 @@
+body {
+    background-image: url('fundo3.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 700px;
+}
+
+.header {
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    font: 25px Arial;
+    cursor: pointer;
+    align-items: center;
+    color: #474646b5;
+    box-shadow: 0 10px 30px rgba(255, 138, 230, 0.333);
+}
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+#logo {
+    width: 90px;
+    height: 90px;
+}
+
+#inicio {
+    margin-left: 80px;
+    
+}
+
+#ajuda {
+    margin-left: 80px;
+}
+
+#sobre {
+    margin-left: 80px;
+}
+
+#login {
+    margin-left: auto;
+    margin-right: 80px;
+}
+
+#inicio:hover {
+    color: rgba(98, 98, 98, 0.633);
+}
+
+#ajuda:hover {
+    color: rgba(98, 98, 98, 0.633);
+}
+
+#sobre:hover {
+    color: rgba(133, 133, 133, 0.633);
+}
+
+#login:hover {
+    color: rgba(133, 133, 133, 0.633);
+}
+
+#logowhats {
+    width: 45px;
+    margin-left: auto;
+    margin-right: 30px;
+}
