@@ -1,0 +1,84 @@
+.div-inicial {
+  height: 100vh;
+  background:
+    linear-gradient(to left, rgba(201, 146, 178, 0.293), rgba(255, 255, 255, 0) 50%), 
+    linear-gradient(to right, rgba(199, 143, 175, 0.312), rgba(255, 255, 255, 0) 50%),
+    url('foto.jpg');
+  background-size: cover; 
+  background-position: center center; 
+  /* background-attachment: fixed; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.container-inicial {
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+  padding-top: 10%;
+}
+
+.texto {
+  font-size: 30px;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  color: rgb(83, 46, 0);
+}
+
+.texto-button {
+  font-size: 40px; 
+  margin-bottom: 0px; 
+  margin-top: 10px;
+}
+
+.button {
+  padding: 15px 40px;               
+  font-size: 24px;                  
+  background-color: rgba(123, 71, 16, 0.726); 
+  color: #fff;                      
+  border: none;                     
+  border-radius: 15px;             
+  cursor: pointer;                  
+  transition: all 0.3s ease;         
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  text-transform: uppercase;        
+  font-weight: bold;                
+}
+
+.button:hover {
+  background-color: rgba(123, 71, 16, 0.9); 
+  transform: translateY(-4px); /* O botão sobe um pouco */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.button:active {
+  transform: translateY(2px); /* Dá o efeito de "pressionar" o botão quando clicado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+.container-button {
+  margin-top: 30px;
+}
+
+/* Inicialmente, todos os elementos com a classe fade-in estão invisíveis */
+.fade-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 2s ease-in-out, transform 3s ease-in-out; /* Transição suave de opacidade */
+}
+
+/* Quando os elementos ganham a classe 'visible', eles ficam visíveis */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#avaliacoes {
+  font-size: 100px;
+
+}
+
+

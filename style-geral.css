@@ -1,19 +1,26 @@
 body {
-    background-image: url('fundo3.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 700px;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
     display: flex;
     margin: 0px;
-    padding: 10px;
-    font: 25px Arial;
+    font: 20px Arial;
     cursor: pointer;
     align-items: center;
-    color: #474646b5;
-    box-shadow: 0 10px 30px rgba(255, 138, 230, 0.333);
+    color: #000000dd;
+    box-shadow: 0 10px 20px rgba(255, 138, 230, 0.333);
+    background-color: rgba(255, 255, 255, 0.581);
+    height: 70px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.header:hover {
+    box-shadow: 0 20px 40px rgba(255, 138, 230, 0.4);
 }
 
 .header-link {
@@ -21,27 +28,32 @@ body {
     color: inherit;
 }
 
+.header-link:hover {
+    text-decoration: underline;
+}
+
 #logo {
-    width: 90px;
-    height: 90px;
+    font: inherit;
+    color: rgb(83, 46, 0);
+    font-size: 35px;
+    margin-left: 50px;
+    font-family: "Arial", Times, serif;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
-#inicio {
-    margin-left: 80px;
-    
+.items-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#ajuda {
-    margin-left: 80px;
-}
-
-#sobre {
-    margin-left: 80px;
-}
-
-#login {
-    margin-left: auto;
-    margin-right: 80px;
+.icones {
+    display: flex;
+    gap: 50px;
+    margin-right: 50px;
+    align-items: center;
 }
 
 #inicio:hover {
@@ -56,12 +68,23 @@ body {
     color: rgba(133, 133, 133, 0.633);
 }
 
-#login:hover {
+#produtos:hover {
     color: rgba(133, 133, 133, 0.633);
 }
 
 #logowhats {
     width: 45px;
-    margin-left: auto;
-    margin-right: 30px;
 }
+
+.footer {
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.766);
+    color: white;
+    text-align: center;
+}
+
+
+
+

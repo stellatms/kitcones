@@ -5,40 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-geral.css">
     <link rel="stylesheet" href="style-inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Kit Cones</title>
 </head>
 <body>
     <div class="header">
-        <img id="logo" src="logo1.png">
-        <div id="inicio"> 
-            <a class="header-link" href="inicio.html"> Início </a> 
+        <div id="logo"> 
+            KitCones
+        </div> 
+        <div class="items-container">
+            <div id="inicio"> 
+                <a class="header-link" href="inicio.html"> Início </a> 
+            </div>
+            <div id="ajuda"> 
+                <a class="header-link" href="ajuda.html"> Ajuda </a> 
+            </div>
+            <div id="produtos"> Produtos </div>
+            <div id="sobre"> Sobre a KitCones </div>
         </div>
-        <div id="ajuda"> 
-            <a class="header-link" href="ajuda.html"> Ajuda </a> 
+        <div class="icones">
+            <a href="https://wa.me/5514991148278">
+                <img id="logowhats" src="logowhats.webp">
+            </a>
+            <i class="fa-solid fa-user user"></i>
         </div>
-        <div id="sobre"> Sobre a KitCones </div>
-        <div id="login"> Login </div>
-        <a href="https://wa.me/5514991148278">
-            <img id="logowhats" src="logowhats.webp">
-        </a>
     </div>
 
-    <div class="container">
-        <h1>Contatoooooooooooo</h1>
-        <div class="form-group">
-            <input type="text" id="nome" placeholder="Nome" required>
+    <div class="div-inicial">
+        <div class="container-inicial">
+            <p class="texto">Sorvetes & Gatos!</p>
+            <p class="texto-button">Explore nossos produtos</p>
+            <div class="container-button">
+                <button class="button">shop</button>
+            </div>
         </div>
-        <div class="form-group">
-            <textarea id="descricao" placeholder="Descrição" rows="10" required></textarea>
-        </div>
-        <div class="form-group">
-            <input type="text" id="cep" placeholder="CEP" required>
-        </div>
-        <div class="form-group">
-            <input type="text" id="telefone" placeholder="Telefone" required>
-        </div>
-        <button onclick="createContato()">Enviar</button>
     </div>
 
+    <div id="avaliacoes" class="fade-in">
+        oiiiiiiiiiiiiiiiiiiii
+    </div>
+
+
+    <div class="footer">
+        <div>Footer</div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            console.log("oii")
+            // Seleciona todos os elementos com a classe 'fade-in'
+            var elementos = document.querySelectorAll('.fade-in');
+          
+            elementos.forEach(function(elemento) {
+              // Verifica a posição do elemento em relação à tela
+              var rect = elemento.getBoundingClientRect();
+              var isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+          
+              // Se o elemento estiver visível, adiciona a classe 'visible'
+              if (isInViewport) {
+                elemento.classList.add('visible');
+              }
+            });
+        });
+    </script>
+      
 </body>
 </html>
