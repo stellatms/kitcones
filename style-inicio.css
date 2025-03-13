@@ -3,14 +3,24 @@
   background:
     linear-gradient(to left, rgba(201, 146, 178, 0.293), rgba(255, 255, 255, 0) 50%), 
     linear-gradient(to right, rgba(199, 143, 175, 0.312), rgba(255, 255, 255, 0) 50%),
+    linear-gradient(to top, rgba(205, 156, 183, 0.312), rgba(255, 255, 255, 0) 50%),
     url('foto.jpg');
   background-size: cover; 
   background-position: center center; 
-  /* background-attachment: fixed; */
-  background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+}
+
+.fade-in-inicial {
+  opacity: 0; 
+  transform: translateX(-100%); 
+  transition: all 1s ease-out
+}
+
+.fade-in-inicial.visible {
+  opacity: 1; 
+  transform: translateX(0); 
 }
 
 .container-inicial {
@@ -33,7 +43,7 @@
   margin-top: 10px;
 }
 
-.button {
+.button-shop {
   padding: 15px 40px;               
   font-size: 24px;                  
   background-color: rgba(123, 71, 16, 0.726); 
@@ -47,14 +57,14 @@
   font-weight: bold;                
 }
 
-.button:hover {
+.button-shop:hover {
   background-color: rgba(123, 71, 16, 0.9); 
-  transform: translateY(-4px); /* O botão sobe um pouco */
+  transform: translateY(-4px); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
-.button:active {
-  transform: translateY(2px); /* Dá o efeito de "pressionar" o botão quando clicado */
+.button-shop:active {
+  transform: translateY(2px); 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
@@ -63,22 +73,112 @@
   margin-top: 30px;
 }
 
-/* Inicialmente, todos os elementos com a classe fade-in estão invisíveis */
 .fade-in {
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity 2s ease-in-out, transform 3s ease-in-out; /* Transição suave de opacidade */
+  transition: opacity 0.2s ease-in-out, transform 1.5s ease-in-out; 
 }
 
-/* Quando os elementos ganham a classe 'visible', eles ficam visíveis */
 .fade-in.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-#avaliacoes {
-  font-size: 100px;
+.div-2 {
+  height: 100vh;
+  background: 
+  linear-gradient(to left, rgba(192, 199, 143, 0.288), rgba(197, 202, 163, 0.288) 50%), 
+  linear-gradient(to right, rgba(192, 199, 143, 0.288), rgba(197, 202, 163, 0.288) 50%),
+  url('beige-abstract-wallpaper-background-image.jpg');
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 1s ease, transform 0.1s ease; 
+}
 
+.div-2.visible {
+  opacity: 1; 
+  transform: translateY(0); 
+
+}
+
+#avaliacoes {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  font-size: 50px;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  color: rgb(83, 46, 0);
+}
+
+@media (max-width: 768px) {
+  #avaliacoes {
+    padding-top: 20px; 
+  }
+}
+
+.container-avaliacoes {
+  display: flex; 
+  margin-top: 20px; 
+  align-items: flex-start;
+  gap: 200px;
+  padding-top: 100px; 
+}
+
+#gato-avaliacoes {
+  width: 250px;
+  margin-left: 50px;
+}
+
+.caixa {
+  padding: 40px;           
+  background-color: rgba(255, 255, 255, 0.363); 
+  border: 2px; 
+  border-radius: 10px;    
+  font-size: 18px;      
+  color: #333;        
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.195); 
+  width: 45vw;
+  margin-top: -60px;
+}
+
+.container-caixas {
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+}
+
+.container-button2 {
+  width: 20vw;
+  margin-top: -60px;
+}
+
+.button2 {
+  padding: 5px 20px;               
+  font-size: 18px;                  
+  background-color: rgb(83, 46, 0);  
+  color: beige;                  
+  border: none;                     
+  border-radius: 10px;             
+  cursor: pointer;                  
+  transition: all 0.3s ease;         
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);         
+
+}
+
+.button2:hover {
+  background-color: rgba(123, 71, 16, 0.9); 
+  transform: translateY(-4px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.button2:active {
+  transform: translateY(2px); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 
