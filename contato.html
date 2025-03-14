@@ -37,15 +37,15 @@
             <form id="contatoForm" action="/enviar" method="POST" onsubmit="return validarFormulario(event)">
                 <div class="input-group">
                     <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" class="input-text" name="nome" placeholder="Seu nome completo" required>
+                    <input type="text" id="nome" class="input-text confetti" name="nome" placeholder="Seu nome completo" required>
                 </div>
                 <div class="input-group">
                     <label for="cep">CEP:</label>
-                    <input type="text" id="cep" class="input-text" name="cep" placeholder="XXXXX-XXX" required>
+                    <input type="text" id="cep" class="input-text confetti" name="cep" placeholder="XXXXX-XXX" required>
                 </div>
                 <div class="input-group">
                     <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" class="input-text" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                    <input type="text" id="telefone" class="input-text confetti" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
                 </div>
                 <div class="input-group">
                     <label for="descricao">Descrição:</label>
@@ -170,9 +170,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
     <script>
-        const input = document.getElementById("nome");
+        document.querySelectorAll(".confetti").forEach(input => {
+            input.addEventListener("keydown", (event) => {
+                const { cursorX, cursorY } = getCursorPosition(input);
+                createParticles(cursorX, cursorY, input);
+            });
+        })
         
-        function createParticles(x, y) {
+        function createParticles(x, y, input) {
             const rect = input.getBoundingClientRect();
             const maxX = rect.right; 
             if (x > maxX) {
@@ -195,7 +200,7 @@
             burst.replay();
         }
 
-        function getCursorPosition() {
+        function getCursorPosition(input) {
             const rect = input.getBoundingClientRect();
             const textBeforeCursor = input.value.substring(0, input.selectionStart);
             const span = document.createElement('span');
@@ -215,10 +220,7 @@
             return { cursorX, cursorY };
         }
 
-        input.addEventListener("keydown", (event) => {
-            const { cursorX, cursorY } = getCursorPosition();
-            createParticles(cursorX, cursorY);
-        });
+        
     </script>
 
     
