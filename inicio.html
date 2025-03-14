@@ -25,9 +25,9 @@
                 <div id="sobre"> Sobre a KitCones </div>
             </div>
             <div class="icones">
-                <a href="https://wa.me/5514991148278">
+                <div id="whatsapp-icon" class="whatsapp-icon">
                     <i class="fa-brands fa-whatsapp logo-whats"></i>
-                </a>
+                </div>
                 <i class="fa-solid fa-user user"></i>
             </div>
         </div>
@@ -37,7 +37,10 @@
             <div class="fade-in-inicial container-inicial">
                 <p class="texto-button">Explore nossos produtos</p>
                 <div class="container-button">
-                    <button class="button-shop">shop</button>
+                    <button class="button-shop" onclick="window.location.href='https://flappybird.io/'">
+                        Shop
+                    </button>
+
                 </div>
             </div>
         </div>
@@ -63,10 +66,9 @@
                     :3
                 </div>
                 <div class="container-button2 fade-in">
-                    <a href="https://www.youtube.com/watch?v=2yJgwwDcgV8">
-                        <button class="button2">ver mais +</button> 
-
-                    </a>
+                    <button class="button2" onclick="window.location.href='https://www.youtube.com/watch?v=2yJgwwDcgV8'">
+                        Ver mais +
+                    </button>
                 </div>
             </div>
         </div>
@@ -95,6 +97,14 @@
         </h1>
     </div>
 
+    <script>
+        const whatsappIcon = document.getElementById('whatsapp-icon');
+
+        whatsappIcon.addEventListener('click', function() {
+          window.location.href = 'https://wa.me/5514991148278';
+        });
+    </script>
+      
     <script>
         window.addEventListener('scroll', function() {
             console.log("container-avaliacoes")
@@ -129,6 +139,8 @@
         };
 
     </script>
+
+
 
     
       

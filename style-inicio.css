@@ -1,7 +1,7 @@
 .container-fundo {
   height: 100vh;
   position: relative;
-  background-image: url('fundo.png'); 
+  background-image: url('fundo.jpeg'); 
   background-size: cover; 
   background-position: center center; 
   background-repeat: no-repeat;
@@ -9,6 +9,9 @@
   background-attachment: fixed;
 }
 
+.header:hover {
+  box-shadow: 0 2px 2px rgba(251, 251, 251, 0.388);
+}
 
 .fade-in-inicial {
   opacity: 0; 

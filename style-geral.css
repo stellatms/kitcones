@@ -17,10 +17,6 @@ body {
     padding-top: 3%;
 }
 
-.header:hover {
-    box-shadow: 0 20px 40px rgba(251, 251, 251, 0.588);
-}
-
 .header-link {
     text-decoration: none;
     color: inherit;
@@ -40,7 +36,7 @@ body {
     gap: 50px;
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(83, 83, 83);
+    color: rgb(65, 64, 64);
 }
 
 .icones {
@@ -51,24 +47,26 @@ body {
 }
 
 #inicio:hover {
-    color: rgba(98, 98, 98, 0.633);
+    color: rgba(78, 77, 77, 0.633);
 }
 
 #contato:hover {
-    color: rgba(98, 98, 98, 0.633);
+    color: rgba(78, 77, 77, 0.633);
 }
 
 #sobre:hover {
-    color: rgba(133, 133, 133, 0.633);
+    color: rgba(78, 77, 77, 0.633);
 }
 
 #produtos:hover {
-    color: rgba(133, 133, 133, 0.633);
+    color: rgba(78, 77, 77, 0.633);
 }
 
-.logo-whats {
-    color: #000000;
-}
+.whatsapp-icon {
+    cursor: pointer;           
+    display: inline-block;                
+    color: #000000;            
+  }
 
 .footer {
     background-color: rgba(0, 0, 0, 0.852);
