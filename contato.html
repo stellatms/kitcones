@@ -11,7 +11,7 @@
 <body>
     <div class="header">
         <div> 
-            <img id="logo" src="logo.jpg">
+            <img id="logo" src="logo.png">
         </div> 
         <div class="items-container">
             <div id="inicio"> 
@@ -25,7 +25,7 @@
         </div>
         <div class="icones">
             <a href="https://wa.me/5514991148278">
-                <img id="logowhats" src="logowhats.webp">
+                <i class="fa-brands fa-whatsapp logo-whats"></i>
             </a>
             <i class="fa-solid fa-user user"></i>
         </div>
@@ -37,24 +37,25 @@
             <form action="#" method="POST">
                 <div class="input-group">
                     <label for="nome">Nome Completo:</label>
-                    <input type="text" class="input-text" name="nome" placeholder="Seu nome completo" required>
+                    <input type="text" id="input-text" name="nome" placeholder="Seu nome completo" required>
                 </div>
                 <div class="input-group">
                     <label for="cep">CEP:</label>
-                    <input type="text" class="input-text" name="cep" placeholder="Seu CEP" required>
+                    <input type="text" id="input-text" name="cep" placeholder="Seu CEP" required>
                 </div>
                 <div class="input-group">
                     <label for="telefone">Telefone:</label>
-                    <input type="tel" class="input-text" name="telefone" placeholder="Seu telefone" required>
+                    <input type="text" id="input-text" name="telefone" placeholder="Seu telefone" required>
                 </div>
                 <div class="input-group">
                     <label for="descricao">Descrição:</label>
-                    <textarea class="input-text" name="descricao" rows="5" placeholder="Fale sobre seu pedido ou dúvida" required></textarea>
+                    <textarea id="input-text" name="descricao" rows="5" placeholder="Fale sobre seu pedido ou dúvida" required></textarea>
                 </div>
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
+
 
     <div class="footer">
         <h1 class="footer1">
@@ -77,6 +78,62 @@
         </h1>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script>
+        const input = document.getElementById("input-text");
+        
+        function createParticles(x, y) {
+            const rect = input.getBoundingClientRect();
+            const maxX = rect.right; 
+            if (x > maxX) {
+                x = maxX;
+            }
 
+            const burst = new mojs.Burst({
+                left: x,
+                top: y,
+                radius: { 5: 25 },
+                count: 6,
+                children: {
+                    shape: "zigzag",
+                    radius: { 3: 6 },
+                    fill: ["#c97bb6", "#9e7144", "#dedda2"],
+                    duration: 500,
+                    easing: "cubic.out"
+                }
+            });
+            burst.replay();
+        }
+
+        function getCursorPosition() {
+            const rect = input.getBoundingClientRect();
+            const textBeforeCursor = input.value.substring(0, input.selectionStart);
+            const span = document.createElement('span');
+            span.style.visibility = 'hidden';
+            span.style.position = 'absolute';
+            span.style.whiteSpace = 'pre';
+            span.style.fontFamily = getComputedStyle(input).fontFamily;
+            span.style.fontSize = getComputedStyle(input).fontSize;
+            span.textContent = textBeforeCursor;
+            document.body.appendChild(span);
+
+            const cursorX = span.getBoundingClientRect().width + rect.left + 5;
+            const cursorY = rect.top + rect.height / 2;
+
+            document.body.removeChild(span);
+
+            return { cursorX, cursorY };
+        }
+
+        input.addEventListener("keydown", (event) => {
+            const { cursorX, cursorY } = getCursorPosition();
+            createParticles(cursorX, cursorY);
+        });
+    </script>
+        
+
+
+
+        
 </body>
 </html>

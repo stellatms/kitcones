@@ -9,36 +9,39 @@
     <title>Kit Cones</title>
 </head>
 <body>
-    <div class="header">
-        <div id="logo"> 
-            KitCones
-        </div> 
-        <div class="items-container">
-            <div id="inicio"> 
-                <a class="header-link" href="inicio.html"> Início </a> 
+    <div class="container-fundo">
+        <div class="header">
+            <div> 
+                <img id="logo" src="logo.png">
+            </div> 
+            <div class="items-container">
+                <div id="inicio"> 
+                    <a class="header-link" href="inicio.html"> Início </a> 
+                </div>
+                <div id="ajuda"> 
+                    <a class="header-link" href="contato.html"> Contato </a> 
+                </div>
+                <div id="produtos"> Produtos </div>
+                <div id="sobre"> Sobre a KitCones </div>
             </div>
-            <div id="ajuda"> 
-                <a class="header-link" href="contato.html"> Contato </a> 
+            <div class="icones">
+                <a href="https://wa.me/5514991148278">
+                    <i class="fa-brands fa-whatsapp logo-whats"></i>
+                </a>
+                <i class="fa-solid fa-user user"></i>
             </div>
-            <div id="produtos"> Produtos </div>
-            <div id="sobre"> Sobre a KitCones </div>
         </div>
-        <div class="icones">
-            <a href="https://wa.me/5514991148278">
-                <img id="logowhats" src="logowhats.webp">
-            </a>
-            <i class="fa-solid fa-user user"></i>
+    
+        <div class="div-inicial">
+            <p class="texto">Lorem ipsum dolor<br>sit amet, consectetur<br>adipiscing elit.</p>
+            <div class="fade-in-inicial container-inicial">
+                <p class="texto-button">Explore nossos produtos</p>
+                <div class="container-button">
+                    <button class="button-shop">shop</button>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="div-inicial">
-        <div class="fade-in-inicial container-inicial">
-            <p class="texto">Sorvetes & Gatos!</p>
-            <p class="texto-button">Explore nossos produtos</p>
-            <div class="container-button">
-                <button class="button-shop">shop</button>
-            </div>
-        </div>
     </div>
 
     <div class="div-2">
@@ -94,7 +97,7 @@
 
     <script>
         window.addEventListener('scroll', function() {
-            console.log("oii")
+            console.log("container-avaliacoes")
             var elementos = document.querySelectorAll('.fade-in');
           
             elementos.forEach(function(elemento) {

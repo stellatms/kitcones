@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(45deg, #f9f7f1, #f5ebd9); 
+}
+
 .inicio {
     font-family: Arial, sans-serif, monospace;
     display: flex;
@@ -8,6 +12,10 @@
     background-size: 300% 300%;
     animation: gradientAnimation 6s ease infinite, backgroundMovement 30s linear infinite;
     padding: 20px; 
+}
+
+.header {
+    background: linear-gradient(45deg, #f9f7f1, #f5ebd9); 
 }
 
 h1 {
@@ -41,7 +49,7 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.input-text {
+#input-text {
     font-family: 'Courier New', Courier, monospace;
 }
 
