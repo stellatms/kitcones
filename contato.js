@@ -62,44 +62,52 @@ async function validarFormulario(event) {
         errorMessagesContainer.innerHTML = errors.join("<br>"); 
     }
     else {
-        const res = await fetch("http://localhost:5000/contato", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify({
-                nome: document.getElementById("nome").value,
-                cep: document.getElementById("cep").value,
-                telefone: document.getElementById("telefone").value,
-                email: document.getElementById("email").value,
-                produto: document.getElementById("produto").value,
-                descricao: document.getElementById("descricao").value,
+        try {
+            const res = await fetch("http://localhost:5000/contato", {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify({
+                    nome: document.getElementById("nome").value,
+                    cep: document.getElementById("cep").value,
+                    telefone: document.getElementById("telefone").value,
+                    email: document.getElementById("email").value,
+                    produto: document.getElementById("produto").value,
+                    descricao: document.getElementById("descricao").value,
+                })
             })
-        })
-
-        if(res.status == 200) {
-              Swal.fire({
-                title: "Enviado com sucesso! Você receberá atualizações pelo email",
-                width: 600,
-                padding: "3em",
-                color: "#716add",
-                background: "#fff url(/images/trees.png)",
-                backdrop: `
-                  rgba(0,0,123,0.4)
-                  url("/images/nyan-cat.gif")
-                  left top
-                  no-repeat
-                `
-              });
-        }
-        else {
+    
+            if(res.status == 200) {
+                  Swal.fire({
+                    title: "Enviado com sucesso! Você receberá atualizações pelo email",
+                    width: 600,
+                    padding: "3em",
+                    color: "#716add",
+                    background: "#fff url(/images/trees.png)",
+                    backdrop: `
+                      rgba(0,0,123,0.4)
+                      url("/images/nyan-cat.gif")
+                      left top
+                      no-repeat
+                    `
+                  });
+            }
+            else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Algo deu errado!",
+                  });
+            }
+        } catch(erro) {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "Algo deu errado!",
+                text: "Não foi possível enviar!",
               });
         }
-    }
+    } 
 }
 
 async function cepValido(cep) {
