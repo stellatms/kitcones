@@ -1,7 +1,7 @@
 .container-fundo {
   height: 100vh;
   position: relative;
-  background-image: url('fundo.jpeg'); 
+  background-image: url('/images/fundo.jpeg'); 
   background-size: cover; 
   background-position: center center; 
   background-repeat: no-repeat;
@@ -91,7 +91,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-
 .container-button {
   margin-top: 30px;
 }
@@ -112,7 +111,7 @@
   background: 
   linear-gradient(to left, rgba(192, 199, 143, 0.288), rgba(197, 202, 163, 0.288) 50%), 
   linear-gradient(to right, rgba(192, 199, 143, 0.288), rgba(197, 202, 163, 0.288) 50%),
-  url('beige-abstract-wallpaper-background-image.jpg');
+  url('/images/beige-abstract-wallpaper-background-image.jpg');
   background-size: cover; 
   background-position: center center; 
   background-repeat: no-repeat;
@@ -124,7 +123,6 @@
 .div-2.visible {
   opacity: 1; 
   transform: translateY(0); 
-
 }
 
 #avaliacoes {
@@ -189,8 +187,7 @@
   border-radius: 10px;             
   cursor: pointer;                  
   transition: all 0.3s ease;         
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);         
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .button2:hover {

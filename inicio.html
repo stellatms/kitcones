@@ -12,7 +12,7 @@
     <div class="container-fundo">
         <div class="header">
             <div> 
-                <img id="logo" src="logo.png">
+                <img id="logo" src="/images/logo.png">
             </div> 
             <div class="items-container">
                 <div id="inicio"> 
@@ -22,7 +22,7 @@
                     <a class="header-link" href="contato.html"> Contato </a> 
                 </div>
                 <div id="produtos"> Produtos </div>
-                <div id="sobre"> Sobre a KitCones </div>
+                <div id="sobre"> Sobre a Kitcones </div>
             </div>
             <div class="icones">
                 <div id="whatsapp-icon" class="whatsapp-icon">
@@ -33,21 +33,19 @@
         </div>
     
         <div class="div-inicial">
-            <p class="texto">KitCones<br> Fabricamos produtos<br>de refrigeração.</p>
+            <p class="texto">Kitcones<br> Fabricamos produtos<br>de refrigeração.</p>
             <div class="container-freezer"> 
-                <img class="freezer" src="freezer.png">
+                <img class="freezer" src="/images/freezer.png">
                 <div class="fade-in-inicial container-inicial">
                     <p class="texto-button">Explore nossos produtos</p>
                     <div class="container-button">
                         <button class="button-shop" onclick="window.location.href='https://flappybird.io/'">
                             Shop
                         </button>
-    
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <div class="div-2">
@@ -56,17 +54,17 @@
         </div>
         <div class="container-avaliacoes">
             <div class="fade-in">
-                <img id="gato-avaliacoes" src="gato-avaliacoes.png">
+                <img id="gato-avaliacoes" src="/images/gato-avaliacoes.png">
             </div>
             <div class="container-caixas">
                 <div class="caixa fade-in">
                     Simplesmente incrível qualidade de construção, os produtos da Kitcones™ são indispensavels em nosso complexo - Giga-ice
                 </div>
                 <div class="caixa fade-in">
-                    legal
+                    Produtos duradouros e eficientes, utilizamos os produtos da Kitcones™ desde 2012 e desde então só uma reparo foi necessário - Johnny' Dairyhouse
                 </div>
                 <div class="caixa fade-in">
-                    :3
+                    Recomendamos fortemente os produtos da Kitcones para qualquer empresa ou pessoa que busque refrigeradores duráveis, eficientes e com um design moderno. Sem dúvidas, uma das melhores marcas do mercado! -Gelarmax
                 </div>
                 <div class="container-button2 fade-in">
                     <button class="button2" onclick="window.location.href='https://www.youtube.com/watch?v=2yJgwwDcgV8'">
@@ -75,25 +73,40 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <div class="footer">
         <h1 class="footer1">
-            <span class="sublinhado">Footer</span>
-            <div class="footer-oi">oi</div>
+            <span class="sublinhado">Empresa</span>
+            <div class="footer1-elementos">
+                <div>- Sobre</div>
+                <div>- Ajuda/FAQ</div>
+                <div>- Copyright</div>
+                <div>- Fundadores</div>
+            </div>
         </h1>
         <h1 class="footer-meio">
-            <span class="sublinhado">123</span>
+            <span class="sublinhado">Recursos</span>
+            <div class="footer-meio-elementos">
+                <div>- Suporte direto da Kitcones</div>
+                <div>- Carreiras</div>
+                <div>- EULA da loja</div>
+            </div>
         </h1>
         <h1 class="footer-meio">
-            <span class="sublinhado">ABC</span>
+            <span class="sublinhado">Nossos Produtos</span>
+            <div class="footer-meio-elementos">
+                <div>- Freezer</div>
+                <div>- Geladeira</div>
+                <div>- Máquina de sorvete</div>
+                <div>- Máquina de milkshake</div>
+                <div>- Máquina de chantilly</div>
+            </div>
         </h1>
         <h1 class="footer2">
             <span class="sublinhado">Redes Sociais</span>
             <div class="container-sociais">
-                <i class="fa-brands fa-facebook-f "></i>
+                <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-tiktok"></i>
@@ -107,9 +120,7 @@
         whatsappIcon.addEventListener('click', function() {
           window.location.href = 'https://wa.me/5514991148278';
         });
-    </script>
-      
-    <script>
+
         window.addEventListener('scroll', function() {
             console.log("container-avaliacoes")
             var elementos = document.querySelectorAll('.fade-in');
@@ -123,9 +134,7 @@
               }
             });
         });
-    </script>
 
-    <script>
         window.addEventListener('scroll', function() {
             var div2 = document.querySelector('.div-2');
             var rect = div2.getBoundingClientRect();
@@ -134,19 +143,13 @@
                 div2.classList.add('visible');  
             }
         });
-    </script>
 
-    <script>
         window.onload = function() {
-        var texto = document.querySelector('.fade-in-inicial');
-        texto.classList.add('visible');
+            var texto = document.querySelector('.fade-in-inicial');
+            texto.classList.add('visible');
         };
 
     </script>
-
-
-
-    
       
 </body>
 </html>
