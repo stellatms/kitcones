@@ -1,7 +1,7 @@
 .container-fundo {
   height: 100vh;
   position: relative;
-  background-image: url('/images/fundo.jpeg'); 
+  background-image: url('./images/fundo.jpeg'); 
   background-size: cover; 
   background-position: center center; 
   background-repeat: no-repeat;
@@ -111,7 +111,7 @@
   background: 
   linear-gradient(to left, rgba(192, 199, 143, 0.288), rgba(197, 202, 163, 0.288) 50%), 
   linear-gradient(to right, rgba(192, 199, 143, 0.288), rgba(197, 202, 163, 0.288) 50%),
-  url('/images/beige-abstract-wallpaper-background-image.jpg');
+  url('./images/beige-abstract-wallpaper-background-image.jpg');
   background-size: cover; 
   background-position: center center; 
   background-repeat: no-repeat;
