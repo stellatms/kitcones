@@ -62,10 +62,48 @@ body {
     color: rgba(78, 77, 77, 0.633);
 }
 
-.whatsapp-icon {
-    cursor: pointer;           
+.whatsapp-icon {         
     display: inline-block;                
     color: #000000;            
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .items-container {
+        display: none;
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+        width: 35%;
+        background-color: rgb(186, 187, 188);
+        position: absolute;
+        top: 99px;
+        right: 0;
+        z-index: 1;
+        padding: 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        color: palevioletred;
+        text-shadow: 0px 0px rgb(73, 47, 1);
+        font-size: 15px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    .hamburger {
+        display: block;
+    }
+    #logo {
+        width: 25vw;
+        margin-left: 0px;
+    }
+}
+
+.items-container.active {
+    display: flex;
 }
 
 .footer {

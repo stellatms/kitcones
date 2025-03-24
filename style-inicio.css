@@ -106,6 +106,62 @@
   transform: translateX(0);
 }
 
+@media (max-width: 768px) {
+  .div-inicial {
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .freezer {
+    width: 50vw; 
+    height: auto; 
+    margin-bottom: 20px; 
+  }
+
+  .container-freezer {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  .texto {
+    font-size: 28px; 
+    margin-left: 0;
+    padding-top: 3%;
+  }
+
+  .texto-button {
+    font-size: 30px; 
+  }
+
+  .button-shop {
+    padding: 12px 30px; 
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .freezer {
+    width: 60vw; 
+  }
+
+  .texto {
+    font-size: 22px; 
+  }
+
+  .texto-button {
+    font-size: 24px;
+  }
+
+  .button-shop {
+    padding: 10px 25px; 
+    font-size: 18px;
+  }
+}
+
 .div-2 {
   height: 100vh;
   background: 
@@ -210,4 +266,62 @@
       transform: translateY(0);
       opacity: 1;
   }
+}
+
+.div-3 {
+  height: 100vh;
+  padding: 100px;
+}
+
+.nos_siga {
+  font-size: 36px;
+  font-family: var(--aofixo-heading-font, "Nunito", sans-serif);
+}
+
+.link-insta {
+  color: var(--aofixo-base, #ffbe50);
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.container-instagram {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+}
+
+.custom-nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 50px; 
+  width: 100%;
+  padding: 0 20px;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.custom-nav button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.custom-nav button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }

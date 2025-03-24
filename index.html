@@ -30,6 +30,9 @@
                 </div>
                 <i class="fa-solid fa-user user"></i>
             </div>
+            <div class="hamburger" id="hamburger-icon">
+                <i class="fa fa-bars"></i> 
+            </div>
         </div>
     
         <div class="div-inicial">
@@ -72,6 +75,27 @@
                     </button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="div-3">
+        <div class="container-instagram">
+            <h3 class="nos_siga">Nos siga no Instagram!</h3>
+            <a class="link-insta" href="https://www.instagram.com/kitcones_official/" target="_blank">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                kitconesofficial
+            </a>
+        </div>
+        <div class="owl-carousel">
+            <div><img src="gatinho1.png" alt="Imagem 1"></div>
+            <div><img src="gatinho2.png" alt="Imagem 2"></div>
+            <div><img src="gatinho3.png" alt="Imagem 3"></div>
+            <div><img src="gatinho4.png" alt="Imagem 4"></div>
+        </div>
+    
+        <div class="custom-nav">
+            <button class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+            <button class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
         </div>
     </div>
 
@@ -149,7 +173,52 @@
             texto.classList.add('visible');
         };
 
+    document.addEventListener("DOMContentLoaded", function () {
+        var hamburgerIcon = document.getElementById("hamburger-icon");
+        var menuItems = document.querySelector(".items-container");
+
+        hamburgerIcon.addEventListener("click", function () {
+            menuItems.classList.toggle("active");
+        });
+    });
+
     </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 4,          
+            loop: true,       
+            margin: 10,        
+            autoplay: true,    
+            smartSpeed: 700,   
+            responsive: {
+                0: {
+                    items: 1    
+                },
+                600: {
+                    items: 2       
+                },
+                1000: {
+                    items: 4       
+                }
+            }
+    });
+
+  $('.prev').click(function() {
+    $('.owl-carousel').trigger('prev.owl.carousel');
+  });
+
+  $('.next').click(function() {
+    $('.owl-carousel').trigger('next.owl.carousel');
+  });
+});
+</script>
       
 </body>
 </html>
