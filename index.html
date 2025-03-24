@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style-geral.css">
     <link rel="stylesheet" href="style-inicio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <title>Kit Cones</title>
 </head>
 <body>
@@ -86,17 +88,26 @@
                 kitconesofficial
             </a>
         </div>
-        <div class="owl-carousel">
-            <div><img src="gatinho1.png" alt="Imagem 1"></div>
-            <div><img src="gatinho2.png" alt="Imagem 2"></div>
-            <div><img src="gatinho3.png" alt="Imagem 3"></div>
-            <div><img src="gatinho4.png" alt="Imagem 4"></div>
-        </div>
-    
-        <div class="custom-nav">
-            <button class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-            <button class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-        </div>
+
+        <section class="container-carousel">
+            <div class="owl-carousel">
+                <div class="item">
+                    <img src="gatinho1.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="gatinho2.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="gatinho3.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="gatinho4.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="gatinho1.png" alt="">
+                </div>
+            </div>
+        </section>
     </div>
 
     <div class="footer">
@@ -185,39 +196,32 @@
     </script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-            items: 4,          
-            loop: true,       
-            margin: 10,        
-            autoplay: true,    
-            smartSpeed: 700,   
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            dots: true,
+            nav: true,
+            autoplayTimeout: 2800,
+            smartSpeed: 700,
+            navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
             responsive: {
                 0: {
-                    items: 1    
+                    items: 1
                 },
-                600: {
-                    items: 2       
+                768: {
+                    items: 2
                 },
-                1000: {
-                    items: 4       
+                1170: {
+                    items: 4
                 }
             }
+        });
     });
-
-  $('.prev').click(function() {
-    $('.owl-carousel').trigger('prev.owl.carousel');
-  });
-
-  $('.next').click(function() {
-    $('.owl-carousel').trigger('next.owl.carousel');
-  });
-});
 </script>
       
 </body>
