@@ -271,23 +271,32 @@
 .div-3 {
   height: 100vh;
   padding: 100px;
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, #eceaea, #14410a76);
+  z-index: 1; 
+  background-attachment: fixed;
 }
 
 .nos_siga {
-  font-size: 36px;
+  font-size: 46px;
   font-family: var(--aofixo-heading-font, "Nunito", sans-serif);
+  color: #054b09;
 }
 
 .link-insta {
-  color: var(--aofixo-base, #ffbe50);
-  font-size: 26px;
+  color: var(--aofixo-base, #054b09);
+  font-size: 36px;
   text-decoration: none;
 }
 
 .container-instagram {
   text-align: center;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
 }
+
+
 
 .container-carousel{
 	position: relative;
@@ -310,6 +319,7 @@
   position: absolute;
   top: 30%;
 	font-size: 40px !important;
+  color: #196f1d !important;
 }
 .owl-carousel .owl-prev {
   left: -70px;
@@ -317,4 +327,74 @@
 .owl-carousel .owl-next {
   right: -70px;
 }
+
+.item {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.instagram-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px; 
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 10;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.instagram-link i {
+  font-size: 30px;
+  color: #5b8f5d; 
+}
+
+.image-wrapper:hover .instagram-link {
+  opacity: 1;
+}
+
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.566);
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  height: 0;
+  transition: height 0.7s ease-in-out;
+}
+
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  transition: 0.9s ease-in-out;
+  overflow: hidden;
+}
+
+.image-wrapper:hover::before {
+  opacity: 1; 
+  height: 100%;
+}
+
+.image-wrapper:hover {
+  transform: rotate(6deg) scale(1.5);
+}
+
+.box-gatinho {
+  border-radius: 10px;
+}
+
 
